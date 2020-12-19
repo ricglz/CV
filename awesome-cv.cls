@@ -48,6 +48,9 @@
 %-------------------------------------------------------------------------------
 % Needed to make fixed length table
 \RequirePackage{array}
+% Needed for using urls
+\RequirePackage{url}
+\RequirePackage{relsize}
 % Needed to handle list environment
 \RequirePackage{enumitem}
 % Needed to handle text alignment
@@ -345,6 +348,9 @@
 % Defines writer's quote (optional)
 % Usage: \quote{<quote>}
 \renewcommand*{\quote}[1]{\def\@quote{#1}}
+
+% Usage: \url{<url>}
+\renewcommand*{\UrlFont}{\ttfamily\smaller\smaller\relax}
 
 % Defines recipient's information (cover letter only)
 % Usage: \recipient{<recipient name>}{<recipient address>}
