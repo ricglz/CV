@@ -17,13 +17,11 @@
 % LPPL v1.3c (http://www.latex-project.org/lppl)
 %
 
-
 %-------------------------------------------------------------------------------
 %                Identification
 %-------------------------------------------------------------------------------
 \ProvidesClass{awesome-cv}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
-
 
 %-------------------------------------------------------------------------------
 %                Class options
@@ -41,7 +39,6 @@
 }
 \ProcessOptions\relax
 \LoadClass{article}
-
 
 %-------------------------------------------------------------------------------
 %                3rd party packages
@@ -92,14 +89,12 @@
   pdfkeywords={}
 }
 
-
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
 % Configure a directory location for fonts(default: 'fonts/')
 \newcommand*{\fontdir}[1][fonts/]{\def\@fontdir{#1}}
 \fontdir
-
 
 %-------------------------------------------------------------------------------
 %                Configuration for layout
@@ -158,7 +153,6 @@
 \def\@sectioncolor#1#2#3{%
   \ifbool{acvSectionColorHighlight}{{\color{awesome}#1#2#3}}{#1#2#3}%
 }
-
 
 %-------------------------------------------------------------------------------
 %                Configuration for fonts
