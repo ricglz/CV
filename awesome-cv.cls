@@ -33,12 +33,19 @@
 % Options for draft or final
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
+\DeclareOption{english}{
+\PassOptionsToPackage{\CurrentOption}{babel}
+}
+\DeclareOption{spanish}{
+\PassOptionsToPackage{\CurrentOption}{babel}
+}
 % Inherit options of article
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}
 }
 \ProcessOptions\relax
 \LoadClass{article}
+\RequirePackage{babel}
 
 %-------------------------------------------------------------------------------
 %                3rd party packages
@@ -732,3 +739,12 @@
       \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
     }
 }
+
+%-------------------------------------------------------------------------------
+%                Multi-language
+%-------------------------------------------------------------------------------
+
+\RequirePackage{iflang}
+% \def\ENG#1{\iflanguage{english}{#1}{}}
+\def\ENG#1{\IfLanguageName{english}{#1}{}}
+\def\ES#1{\IfLanguageName{spanish}{#1}{}}
