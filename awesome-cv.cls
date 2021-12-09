@@ -567,9 +567,9 @@
 
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
-\newcommand{\cvsection}[1]{%
+\newcommand{\cvsection}[2]{%
   \vspace{\acvSectionTopSkip}
-  \sectionstyle{#1}
+  \sectionstyle{\Intl{#1}{#2}}
   \phantomsection
   \color{gray}\vhrulefill{0.9pt}
 }
@@ -745,6 +745,14 @@
 %-------------------------------------------------------------------------------
 
 \RequirePackage{iflang}
-% \def\ENG#1{\iflanguage{english}{#1}{}}
-\def\ENG#1{\IfLanguageName{english}{#1}{}}
-\def\ES#1{\IfLanguageName{spanish}{#1}{}}
+
+\newcommand{\ENG}[1]{\IfLanguageName{english}{#1}{}}
+\newcommand{\ES}[1]{\IfLanguageName{spanish}{#1}{}}
+
+\newcommand{\Intl}[2]{\ENG{#1}\ES{#2}}
+\newcommand{\IntlMonth}[2]{\Intl{#1}{#2}. }
+
+\newcommand{\IntlRemote}{\Intl{{Remote}}{{Remoto}}}
+\newcommand{\IntlJan}{\IntlMonth{{Jan}}{{Ene}}}
+\newcommand{\IntlAug}{\IntlMonth{{Aug}}{{Ago}}}
+\newcommand{\IntlDec}{\IntlMonth{{Dec}}{{Dic}}}
