@@ -751,6 +751,7 @@
 
 \newcommand{\Intl}[2]{\ENG{#1}\ES{#2}}
 \newcommand{\IntlMonth}[2]{\Intl{#1}{#2}. }
+\newcommand{\IntlItem}[2]{\item{\Intl{#1}{#2}}}
 
 \newcommand{\IntlRemote}{\Intl{{Remote}}{{Remoto}}}
 \newcommand{\IntlJan}{\IntlMonth{{Jan}}{{Ene}}}
