@@ -1,11 +1,13 @@
 %-----------------------------------------------------------------
 %	SECTION TITLE
 %-----------------------------------------------------------------
-\cvsection{Projects}
+\cvsection{{Projects}}{{Proyectos}}
 %-----------------------------------------------------------------
 %	CONTENT
 %-----------------------------------------------------------------
 \begin{cventries}
+%---------------------------------------------------------
+%----------------Web Development-----------------------------
 %---------------------------------------------------------
 
   \cventry
@@ -15,29 +17,90 @@
     {\url{ttt-hl-react.firebaseapp.com}} % URL
     {
       \begin{cvitems} % Description(s) of experience/contributions/knowledge
-        \item {Created project to experiment with technologies, that's a modification of the popular Tic-Tac-Toe game}
-        \item {Developed an MVP website using HTML, JS and CSS, then improved the scalability and features in another app ReactJS}
-        \item {Created an Open Source project that currently has 10+ contributors and 20+ forks on Github}
-        \item {Implemented CI pipelines for detecting code style issues and deploying Travis CI}
-        \item {Made use of serverless functions and databases using Firebase tools}
+        \IntlItem {{
+          Created project to experiment with technologies, that's a modification of the popular Tic-Tac-Toe game
+        }} {{
+          Crée un proyecto para experimentar con tecnologías de desarrollo web
+        }}
+        \IntlItem {{
+          Developed an MVP website using HTML, JS and CSS, then improved the scalability and features in another app ReactJS
+        }} {{
+          Desarrollé un MVP usando sólo HTML, JS y CSS, para después mejorarlo usando ReactJS
+        }}
+        \IntlItem {{
+          Created an Open Source project that currently has 10+ contributors and 20+ forks on Github
+        }} {{
+          Abrí el proyecto como uno de código abierto, el cual tiene actualmente más de 10 contribuidores y más de 20 forks en Github
+        }}
+        \IntlItem {{
+          Implemented CI pipelines for detecting code style issues and deploying Travis CI
+        }} {{
+          Implementé pruebas automatizadas y un sistema para hacer el deploy automáticamente usando Travis CI.
+        }}
+        \IntlItem {{
+          Made use of serverless functions and databases using Firebase tools
+        }} {{
+          Usé las herramientras de Firebase para crear base de datos y funcionalidades serverless
+        }}
       \end{cvitems}
     }
+%---------------------------------------------------------
+%----------------Mobile Development-----------------------
 %---------------------------------------------------------
 
   \cventry
     {Swift}
     {Base-Calc} % Name
-    {Feb. 2020 - Jun. 2020} % Dates
+    {Feb. - Jun. 2020} % Dates
     {\url{www.github.com/ricglz/Base-Calc}} % URL
     {
       \begin{cvitems} % Description(s) of experience/contributions/knowledge
-        \item {Built UI components using Swift UI}
-        \item {Created unit tests for the logical functions and classes of the codebase}
-        \item {Implemented the CI workflow for testing and building the app}
+        \IntlItem {{
+          Built UI components using Swift UI
+        }} {{
+          Desarrollé los componentes de la intefaz usando Swift UI
+        }}
+        \IntlItem {{
+          Created unit tests for the logical functions and classes of the codebase
+        }} {{
+          Diseñé pruebas de unidad para todas las funciones y clases de toda la aplicación
+        }}
+        \IntlItem {{
+          Implemented the CI workflow for testing and building the app
+        }} {{
+          Implementé un flujo de integración continua que probaba y compilaba la aplicación
+        }}
       \end{cvitems}
     }
 %---------------------------------------------------------
+%----------------Data Science and AI----------------------
+%---------------------------------------------------------
 
+  \cventry
+    {Python}
+    {Magic Mirror} % Name
+    {May. - \IntlAug 2021} % Dates
+    {\url{https://github.com/ricglz/Magic-mirror}} % URL
+    {
+      \begin{cvitems} % Description(s) of experience/contributions/knowledge
+        \IntlItem {{
+          Developed a Real Time Application for Deep Fakes, using OpenCV and Pytorch
+        }} {{
+          Desarrollé una aplicación en tiempo real para generar Deep Fakes usando OpenCV y Pytorch
+        }}
+        \IntlItem {{
+          Compared qualitive and quantiative performance of different techniques
+        }} {{
+          Hice comparaciones cualitativas y cuantitaticas de diferente técnicas para Deep Fakes
+        }}
+        \IntlItem {{
+          Wrote a Masters dissertation based on the discoveries of this project
+        }} {{
+          Escribí una tésis para maestría basda en los aprendizajes de este proyecto
+        }}
+      \end{cvitems}
+    }
+%---------------------------------------------------------
   \cventry
     {Python}
     {Stock Analyzer} % Name
@@ -45,52 +108,108 @@
     {\url{www.github.com/ricglz/stock-analyzer}} % URL
     {
       \begin{cvitems} % Description(s) of experience/contributions/knowledge
-        \item {Used pandas for dataframe management}
-        \item {Pulled stocks historical data using Yahoo Finance API}
-        \item {Created technical indicators using 3rd-party library}
+        \IntlItem {{
+          Used pandas for dataframe management of stock data
+        }} {{
+          Usé pandas para administrar los datos de acciones
+        }}
+        \IntlItem {{
+          Pulled stocks historical data using Yahoo Finance API
+        }} {{
+          Utilicé los datos de las acciones usando la API de Yahoo Finance
+        }}
+        \IntlItem {{
+          Calculated technical indicators using 3rd-party library
+        }} {{
+          Calculé los indicadores técnicos cuantitativos usando librerías auxiliares
+        }}
       \end{cvitems}
     }
 %---------------------------------------------------------
 
-  % \cventry
-  %   {Javascript; Ruby}
-  %   {Annotate-it}
-  %   {May, 2020}
-  %   {\url{https://annotate-it-25533.firebaseapp.com}}
-  %   {
-  %     \begin{cvitems}
-  %       \item {Created react-typescript application for managing with crud notes and folders}
-  %       \item {Designed UI interface for the application and rendering with markdown notation}
-  %       \item {Developed GraphQL API using ruby on rails with authentication}
-  %     \end{cvitems}
-  %   }
+  \cventry
+    {Python}
+    {Lander experiment}
+    {\IntlDec 2020}
+    {\url{www.github.com/ricglz/lander-experiment}}
+    {
+      \begin{cvitems}
+        \IntlItem {{
+          Cleaned prior code of a game engine for a lander game
+        }} {{
+          Limpié el código anterior para el game engine del juego
+        }}
+        \IntlItem {{
+          Added an API to be able to control the player using AI
+        }} {{
+          Añadí un API para poder controlar el player siendo un AI
+        }}
+        \IntlItem {{
+          Implemented Supervised and Reinforcement learning algorithms for the bot
+        }} {{
+          Implementé algoritmos de aprendizaje supervisado y reforzado para este juego
+        }}
+      \end{cvitems}
+    }
+%---------------------------------------------------------
+%----------------School Projects--------------------------
+%---------------------------------------------------------
+
+  \cventry
+    {Javascript; Ruby}
+    {Annotate-it}
+    {May, 2020}
+    {\url{https://annotate-it-25533.firebaseapp.com}}
+    {
+      \begin{cvitems}
+        \IntlItem {{
+          Created react-typescript application for managing with crud notes and folders
+        }}{{
+          Crée un sitio web usando ReactJS y Typescript para organizar notas, folders y categorías
+        }}
+        \IntlItem {{
+          Designed UI for the application and rendering with markdown notation
+        }}{{
+          Diseñé una interfaz de usuario, capaz de aceptar notación tipo markdown para las notas
+        }}
+        \IntlItem {{
+          Developed GraphQL API using ruby on rails with authentication
+        }}{{
+          Desarrollé una API de GraphQL usando Ruby on Rails con autentificación
+        }}
+      \end{cvitems}
+    }
+%---------------------------------------------------------
+%----------------Other------------------------------------
 %---------------------------------------------------------
 
   \cventry
     {Java}
     {Discoords}
-    {January, 2021}
+    {\IntlJan 2021}
     {\url{www.github.com/ricglz/discoords}}
     {
       \begin{cvitems}
-        \item {Developed a Minecraft plugin to help specific needs that my community had}
-        \item {Learned the Bukkit and Discord APIs for the development}
-        \item {Wrote documentation for new users to how to install the plugin}
-        \item {Released newer versions with improvements or fixes through Github}
+        \IntlItem {{
+          Developed a Minecraft plugin to help specific needs that my community had
+        }}{{
+          Desarrollé un plugin para Minecraft con base en mis necesidades
+        }}
+        \IntlItem {{
+          Learned the Bukkit and Discord APIs for the development
+        }}{{
+          Aprendí sobre las librerías de Bukkit y de Discord
+        }}
+        \IntlItem {{
+          Wrote documentation for new users to how to install the plugin
+        }}{{
+          Escribí documentación para nuevos usuarios sobre cómo instalar el plugin
+        }}
+        \IntlItem {{
+          Released newer versions with improvements or fixes through Github
+        }}{{
+          Publiqué nuevas versiones con mejoras y/o correcciones a través de Github
+        }}
       \end{cvitems}
     }
-%---------------------------------------------------------
-
-  % \cventry
-  %   {Python}
-  %   {Lander experiment}
-  %   {December, 2020}
-  %   {\url{www.github.com/ricglz/discoords}}
-  %   {
-  %     \begin{cvitems}
-  %       \item {Cleaned prior code of a game engine for a lander game}
-  %       \item {Added an API to be able to control the player using AI}
-  %       \item {Implemented Supervised and Reinforcement learning algorithms for the bot}
-  %     \end{cvitems}
-  %   }
 \end{cventries}

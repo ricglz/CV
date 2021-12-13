@@ -33,12 +33,19 @@
 % Options for draft or final
 \DeclareOption{draft}{\setlength\overfullrule{5pt}}
 \DeclareOption{final}{\setlength\overfullrule{0pt}}
+\DeclareOption{english}{
+\PassOptionsToPackage{\CurrentOption}{babel}
+}
+\DeclareOption{spanish}{
+\PassOptionsToPackage{\CurrentOption}{babel}
+}
 % Inherit options of article
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}
 }
 \ProcessOptions\relax
 \LoadClass{article}
+\RequirePackage{babel}
 
 %-------------------------------------------------------------------------------
 %                3rd party packages
@@ -560,9 +567,9 @@
 
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
-\newcommand{\cvsection}[1]{%
+\newcommand{\cvsection}[2]{%
   \vspace{\acvSectionTopSkip}
-  \sectionstyle{#1}
+  \sectionstyle{\Intl{#1}{#2}}
   \phantomsection
   \color{gray}\vhrulefill{0.9pt}
 }
@@ -732,3 +739,21 @@
       \letterenclosurestyle{\@letterenclname: \@letterenclosure} \\
     }
 }
+
+%-------------------------------------------------------------------------------
+%                Multi-language
+%-------------------------------------------------------------------------------
+
+\RequirePackage{iflang}
+
+\newcommand{\ENG}[1]{\IfLanguageName{english}{#1}{}}
+\newcommand{\ES}[1]{\IfLanguageName{spanish}{#1}{}}
+
+\newcommand{\Intl}[2]{\ENG{#1}\ES{#2}}
+\newcommand{\IntlMonth}[2]{\Intl{#1}{#2}. }
+\newcommand{\IntlItem}[2]{\item{\Intl{#1}{#2}}}
+
+\newcommand{\IntlRemote}{\Intl{{Remote}}{{Remoto}}}
+\newcommand{\IntlJan}{\IntlMonth{{Jan}}{{Ene}}}
+\newcommand{\IntlAug}{\IntlMonth{{Aug}}{{Ago}}}
+\newcommand{\IntlDec}{\IntlMonth{{Dec}}{{Dic}}}
